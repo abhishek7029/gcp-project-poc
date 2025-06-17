@@ -1,0 +1,16 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [
+      'build',
+      '-t', 'asia-south1-docker.pkg.dev/prj-devops-anmol/non-prod-tothenew-bluebell-frontend /nginx:latest',
+      '.'
+    ]
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [
+      'push',
+      'asia-south1-docker.pkg.dev/prj-devops-anmol/non-prod-tothenew-bluebell-frontend /nginx:latest'
+    ]
+
+images:
+  - 'asia-south1-docker.pkg.dev/prj-devops-anmol/non-prod-tothenew-bluebell-frontend /nginx:latest'

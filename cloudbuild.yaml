@@ -14,3 +14,5 @@ steps:
 
 images:
   - 'asia-south1-docker.pkg.dev/prj-devops-anmol/non-prod-tothenew-bluebell-frontend /nginx:latest'
+options:
+  logging: CLOUD_LOGGING_ONLY
